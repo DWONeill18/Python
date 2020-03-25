@@ -75,3 +75,114 @@ def reverse(text):
   
 print(reverse("Hello World"))
 
+# remove vowels from string
+def anti_vowel(text):
+  word = ""
+  for char in text:
+    if char not in "aeiouAEIOU":
+      word += char
+  return word
+
+print(anti_vowel("HeLlO hOw ArE yOu?"))
+
+# scrabble
+score = {"a": 1, "c": 3, "b": 3, "e": 1, "d": 2, "g": 2, 
+         "f": 4, "i": 1, "h": 4, "k": 5, "j": 8, "m": 3, 
+         "l": 1, "o": 1, "n": 1, "q": 10, "p": 3, "s": 1, 
+         "r": 1, "u": 1, "t": 1, "w": 4, "v": 4, "y": 4, 
+         "x": 8, "z": 10}
+
+def scrabble_score(word):
+    word = word.lower()
+    total = 0
+    for char in word:
+        total = total + score[char]
+    return total
+
+print(scrabble_score("abc"))
+
+# censor a word in a sentence
+def censor(text, word):
+    # split the string so you can loop through it
+    words = text.split()
+    result = ''
+    stars = '*' * len(word)
+    count = 0
+    # loop through the indices in the list and replace words with stars
+    for i in words:
+        if i == word:
+            words[count] = stars
+        count += 1
+    result =' '.join(words)
+
+    return result
+  
+print(censor("what the beep is going on!!", "beep"))
+
+# count the number of times an item appear in a list
+def count(sequence, item):
+  count = 0
+  for x in sequence:
+    if x == item:
+      count += 1
+  return count
+
+print(count([1, 1, 2, 3, 5, 5, 6, 7, 7, 7, 8], 7))
+
+# purify will remove odd numbers from a list
+def purify(sequence):
+  second_seq = []
+  for num in sequence:
+    if num % 2 == 0:
+      second_seq.append(num)
+  return second_seq
+
+print(purify([1, 2, 3, 4]))
+
+# product will give the product of all numbers in the list
+def product(lst):
+  total = 1
+  for ele in lst:
+    total *= ele
+  return total
+
+print(product([1, 2, 3, 4]))
+
+# removes duplicates from a list
+def remove_duplicates(inputlist):
+    if inputlist == []:
+        return []    
+    inputlist = sorted(inputlist)
+    # Initialize the output list, and give it the first value of the now-sorted input list
+    outputlist = [inputlist[0]]
+
+    # append values that are greater than the last value of the output list
+    for i in inputlist:
+        if i > outputlist[-1]:
+            outputlist.append(i)
+        
+    return outputlist
+  
+print(remove_duplicates([1, 1, 2, 2]))
+
+
+# sort a list then calculate a the median value,
+# if an even number of items in list then calculate the mean of the two middle items
+def median(lst):
+    sorted_list = sorted(lst)
+    if len(sorted_list) % 2 != 0:
+        #odd no. of elements
+        #//2 give floor division = middle index
+        index = len(sorted_list)//2 
+        return sorted_list[index]
+    elif len(sorted_list) % 2 == 0:
+        #even no. of elements
+        #/ give float so need // for integer indices
+        index_1 = len(sorted_list)//2 -1
+        #print(index_1)
+        index_2 = len(sorted_list)//2
+        #print(index_2)
+        mean = (sorted_list[index_1] + sorted_list[index_2])/2.0
+        return mean
+   
+print(median([2, 4, 5, 9]))
