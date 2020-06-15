@@ -38,6 +38,26 @@ regex \d\s\w\w\w\w\w\w
 # "deer are my favorite!", "otters are my favorite!", "hedgehogs are my favorite!"
 regex (puppies|kitty cats) are my favorite!
 
+#Quantifiers Fixed
+
+#matching "squeaaak", "squeaaaak", "squeaaaaak" but NOT
+# "squeak", "squeaak", "squeaaaaaak"
+
+regex squea(3,5)k
+
+#Quantifiers Optional
+
+#matching "1 duck for adoption?", "5 ducks for adoption?", "7 ducks for adoption?"
+regex \d\sducks?\sfor\sadoption\?
+
+#Quantifiers - 0 or more, 1 or more - Kleene
+
+#matching "hoot", "hoooooot", "hooooooooooot" but NOT
+# "hot", "hoat", "hoo"
+
+regex hoo+t
+#regex hoo*t matches "hot" as well 
+
 
 
 
