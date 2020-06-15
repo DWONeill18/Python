@@ -58,6 +58,8 @@ regex \d\sducks?\sfor\sadoption\?
 regex hoo+t
 #regex hoo*t matches "hot" as well 
 
+#Anchors
 
-
-
+#matching "penguins are cooler than regular expressions" but NOT
+# "king penguins are cooler than regular expressions", "penguins are cooler than regular expressions!"
+regex ^penguins\sare\scooler\sthan\sregular\sexpressions$
