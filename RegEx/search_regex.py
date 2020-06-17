@@ -24,3 +24,25 @@ print(x.start())
 # Returns no matches
 x = re.search("Portugal", txt)
 print(x)
+
+# The Match object has other proprties and methods used to retrieve information about the search and the result
+
+# The .span() method returns a tuple containing the start and end postions of the match
+
+# Searches words with an uppercase S
+txt = "The rain in Spain"
+x = re.search(r"\bS\w+", txt)
+print(x.span())
+
+# The .string() method returns the string passed into the function
+
+# Prints the string passed into the function
+txt = "The rain in Spain"
+x = re.search(r"\bS\w+", txt)
+print(x.string)
+
+
+# The .group() method returns the part of the string where there was a match
+txt = "The rain in Spain"
+x = re.search(r"\bS\w+", txt)
+print(x.group())
