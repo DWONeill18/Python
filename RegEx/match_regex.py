@@ -105,6 +105,7 @@ regex(u)
 """
 
 #Shorthand Character Classes ( \w, \d, \s, \W, \D, \S )
+# ( \A \b \B \Z)
 
 #matching "5 sloths", "8 llamas", "7 hyenas" but NOT "one bird", "two owls"
 #regex \d\s\w\w\w\w\ws
@@ -129,6 +130,19 @@ regex(x)
 regex(y)
 regex(z)
 """
+
+# \A returns a match if the specified characters are at the beginning of the string
+
+txt_b1 = "The start"
+txt_b2 = "Not the start"
+
+b1 = re.match("\AThe", txt_b1)
+b2 = re.match("\AThe", txt_b2)
+
+#regex(b1)
+#regex(b2)
+
+
 
 #Grouping
 
