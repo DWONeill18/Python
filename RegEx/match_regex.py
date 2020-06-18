@@ -268,3 +268,16 @@ regex(au)
 regex(av)
 regex(aw)
 """
+
+# Regular Expression Modifiers: Option flags
+# re.I Perfroms case insensitive matching
+# re.L Interprets words according to the current locale
+# re.M Makes $ match the end of a line and makes ^ match the start of any line
+# re.S Makes a period match any character, including a newline
+# re.U Interprets letters according to the Unicode character set
+# re.X Ignores whitespace (except inside a set[] or when escpaced by a backslash)
+# and treats unescaped # as a comment 
+
+line = "penguins are cooler than regular expressions"
+ax = re.match("^penguins\sare\scooler\sthan\sregular\sexpressions$", line, re.I|re.M)
+regex(ax)
