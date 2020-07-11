@@ -29,6 +29,7 @@ print(e)
 print("\n")
 
 # arange
+
 # f: array of 0 to 9    g: array of 5 to 9  h: array of 0 to 1 with a increment of 0.1
 f = np.arange(10)
 g = np.arange(5, 10)
@@ -38,3 +39,21 @@ print(f)
 print(g)
 print(h)
 
+# reshape
+
+# reshape array of 0 to 9 to a 2*5 or 5*2
+i = np.arange(10).reshape(2, 5)
+j = np.arange(10).reshape(5, 2)
+print(i)
+print(j)
+
+# linspace
+
+# create aray of values that split between x and y into z values
+k = np.linspace(0, 1, 5)
+l = np.linspace(0, 1, 20)
+m = np.linspace(0, 1, 20, False)
+
+print(k)
+print(l)
+print(m)
