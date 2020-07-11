@@ -27,3 +27,14 @@ print("\n")
 e = np.random.rand(3,3,3)
 print(e)
 print("\n")
+
+# arange
+# f: array of 0 to 9    g: array of 5 to 9  h: array of 0 to 1 with a increment of 0.1
+f = np.arange(10)
+g = np.arange(5, 10)
+h = np.arange(0, 1, .1)
+
+print(f)
+print(g)
+print(h)
+
