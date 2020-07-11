@@ -57,3 +57,13 @@ m = np.linspace(0, 1, 20, False)
 print(k)
 print(l)
 print(m)
+
+# zeros, ones, empty
+
+print(np.zeros(5))
+print(np.zeros((3, 3)))
+print(np.zeros((3, 3), dtype=np.int))
+print(np.ones(5))
+print(np.ones((3, 3)))
+print(np.empty(5))
+print(np.empty((2, 2)))
