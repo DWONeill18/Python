@@ -90,3 +90,15 @@ print("\n")
 
 print(np.empty((2, 2)))
 print("\n")
+
+# Identity and eye
+
+# identity matrix
+print(np.identity(3))
+
+# diagonal matrix, can choose size
+print(np.eye(3,3))
+print(np.eye(4,4))
+print(np.eye(4,4, k=1))
+print(np.eye(4,4, k=-1))
+
