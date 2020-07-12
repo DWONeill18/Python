@@ -57,13 +57,36 @@ m = np.linspace(0, 1, 20, False)
 print(k)
 print(l)
 print(m)
+print("\n")
 
 # zeros, ones, empty
 
+# array of 5 zeros(floats)
 print(np.zeros(5))
+print("\n")
+
+# 3*3 array of zeros(floats)
 print(np.zeros((3, 3)))
+print("\n")
+
+# 3*3 array of zeros(ints)
 print(np.zeros((3, 3), dtype=np.int))
+print("\n")
+
+# array of 5 ones(floats)
 print(np.ones(5))
+print("\n")
+
+# 3*3 array of ones(floats)
 print(np.ones((3, 3)))
+print("\n")
+
+# the empty function is used to create a new array of given shape and type, without intializing entries
 print(np.empty(5))
+print("\n")
+
+print(np.empty(3))
+print("\n")
+
 print(np.empty((2, 2)))
+print("\n")
