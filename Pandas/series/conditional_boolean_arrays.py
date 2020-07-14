@@ -37,3 +37,13 @@ print("\n")
 # complex conditionals
 print(g7_pop[(g7_pop > g7_pop.mean() - g7_pop.std() / 2) | (g7_pop > g7_pop.mean() + g7_pop.std() / 2)])
 print("\n")
+
+
+# Boolean Arrays
+################
+
+# OR example
+print(g7_pop[(g7_pop > 80) | (g7_pop < 40)])
+
+# AND example
+print(g7_pop[(g7_pop > 80) & (g7_pop < 200)])
