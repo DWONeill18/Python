@@ -64,3 +64,48 @@ print("\n")
 print(df['Population'])
 print("\n")
 
+# for a dataframe-like format
+print(df['Population'].to_frame())
+print("\n")
+
+
+# multiple columns
+print(df[['Population', 'GDP']])
+print("\n")
+
+# slicing at row level
+print(df[1:3])
+print("\n")
+
+# select rows using loc
+print(df.loc['Italy'])
+print("\n")
+
+print(df.loc['France': 'Italy'])
+print("\n")
+print(df.loc['France': 'Italy', 'Population'])
+print("\n")
+print(df.loc['France': 'Italy', ['Population', 'GDP']])
+print("\n")
+
+# numeric position of the index
+print(df.iloc[0])
+print("\n")
+
+print(df.iloc[-1])
+print("\n")
+
+print(df.iloc[[0, 1, -1]])
+print("\n")
+
+print(df.iloc[1:3])
+print("\n")
+
+print(df.iloc[1:3, 3])
+print("\n")
+
+print(df.iloc[1:3, [0, 3]])
+print("\n")
+
+print(df.iloc[1:3, 1:3])
+print("\n")
