@@ -87,3 +87,38 @@ print(df.rename(
         'Argentina': 'AR'
     }))
 
+print("\n")
+
+# Make all indices uppercase
+print(df.rename(index=str.upper))
+print("\n")
+
+# Make all indices lowercase
+print(df.rename(index=lambda x: x.lower()))
+
+# Dropping columns
+print(df.drop(columns='Language', inplace=True))
+print("\n")
+
+# Adding Values
+# this olny gives a new DataFrame
+print(df.append(pd.Series({
+    'Population': 3,
+    'GDP': 5
+}, name='China')))
+
+# Directly set a new index and values to the DataFrame
+df.loc['China'] = pd.Series({'Population': 1_400_000_000, 'Continent': 'Asia'})
+print(df)
+
+# can remove a row by index using drop, affects original dataframe
+#df.drop('China', inplace=True)
+print(df)
+
+# radical index changes
+df.reset_index()
+df.set_index('Population')
+
+# creating columns from other columns
+df['GDP Per Capita'] = df['GDP'] / df['Population']
+print(df)
