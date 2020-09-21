@@ -69,3 +69,39 @@ df = pd.DataFrame([
 clinic_north = df.clinic_north
 print(type(clinic_north)) # Series
 print(type(df)) # DataFrame
+
+# Selecting Multiple Columns
+
+clinic_north_south = df[['clinic_north', 'clinic_south']]
+print(type(clinic_north_south))
+# dataframe
+
+# Selecting Rows
+
+march = df.iloc[2]
+# series
+
+# Selecting Multiple Rows
+
+april_may_june = df.iloc[3:6]
+print(april_may_june)
+
+# Select Rows with Logic
+
+january = df[df.month == 'January']
+print(january)
+
+march_april = df[(df.month == 'March') | (df.month == 'April')]
+print(march_april)
+
+january_february_march = df[df.month.isin(['January', 'February', 'March'])]
+print(january_february_march)
+
+# Setting Indices
+# drop=TRue to remove old index column, inplace=True keeps our original df so we can modify it
+
+df2 = df.loc[[1, 3, 5]]
+print(df2)
+
+df3 = df2.reset_index(inplace=True, drop=True)
+print(df3)
